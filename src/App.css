@@ -4,11 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #323232;
   font-family: 'Poppins', sans-serif;
 }
 
 body{
-  background-color: pink;
+  background-color: rgb(253, 171, 185);
 }
 
 .navbar{
@@ -16,6 +17,7 @@ body{
   display: flex;
   padding-left: 20px;
   align-items: center;
+  height: 50px;
   /* background-color: #ccc; */
   justify-content: space-between;
 }
