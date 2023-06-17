@@ -1,28 +1,32 @@
 import './App.css';
+import React from 'react';
 import Login from './Login';
 import Register from './Register';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
 
-  const isLoggedIn = true;
-
   return (
-    <div className="App">
-      <div className='navbar'>
-          <h1>User-Auth</h1>
+    <BrowserRouter>
+      <div className="App">
+        <div className='navbar'>
+            <h1>User-Auth</h1>
 
-          <ul>
-             <li>Home</li>
-             <li>About</li>
-             <li>Contact Us</li>
-             {/* { isLoggedIn? <li>Logout</li> : <li>Login</li> }  */}
-             
-          </ul>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact Us</li>
+            </ul>
+        </div>
+
+          <Routes>
+            <Route path='/register' element = { <Register/> } />
+            <Route path='/' element = { <Login/> } />
+          </Routes>
+        
       </div>
-
-      { isLoggedIn? <Login /> : <Register/> } 
-      
-    </div>
+    
+    </BrowserRouter>
   );
 }
 

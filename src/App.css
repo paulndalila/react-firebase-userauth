@@ -13,9 +13,9 @@ body{
 }
 
 .navbar{
-  width: calc(100%);
+  width: calc(100% - 20px);
   display: flex;
-  padding-left: 20px;
+  padding: 5px 20px;
   align-items: center;
   height: 50px;
   /* background-color: #ccc; */
