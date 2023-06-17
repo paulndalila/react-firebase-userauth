@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import Login from './Login';
+import Login, { logInSuccess } from './Login';
 import Register from './Register';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
@@ -23,7 +23,6 @@ function App() {
             <Route path='/register' element = { <Register/> } />
             <Route path='/' element = { <Login/> } />
           </Routes>
-        
       </div>
     
     </BrowserRouter>

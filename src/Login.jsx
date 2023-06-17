@@ -1,19 +1,44 @@
 import './loginRegister.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from './firebase';
 
 export default function Login(){
+      
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    
+
+    const signin = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password).then(
+            (userCredential)=>{
+                alert(userCredential.user.email+ " successfully logged in!");    
+                setPassword('');
+                setEmail('');
+            }).catch((error) => {
+                alert(error);
+                setPassword('');
+                setEmail('');
+            })
+
+    }
+
     return (
         <div className='container'>
-            <div className='form'>
+            <form onSubmit={ signin } className='form'>
                 <h3>Login</h3>
 
-                <input type="email" name='email' placeholder='Email address' />
-                <input type="password" name='password' placeholder='Password'/>
-                <button id='signin' name='signin'>Sign In</button>
-                
+                <input type="email" placeholder='Email address' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+
+                <input type="password" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+
+                <button id='signin' type='submit' >Sign In</button>
+
                 <div>Don't have an account? <Link to="/register" > Register </Link></div>
-            </div>
+            </form>
         </div>
     );
 }
