@@ -3,6 +3,9 @@ import Login from './Login';
 import Register from './Register';
 
 function App() {
+  
+  const isLoggedIn = false;
+
   return (
     <div className="App">
       <div className='navbar'>
@@ -16,10 +19,8 @@ function App() {
           </ul>
       </div>
 
+      { isLoggedIn? <Login /> : <Register/> } 
       
-
-      <Login />
-      <Register/>
     </div>
   );
 }
