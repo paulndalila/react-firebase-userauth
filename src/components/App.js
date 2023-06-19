@@ -3,23 +3,15 @@ import React from 'react';
 import Login from './Login';
 import Home from './Home';
 import Register from './Register';
+import Navbar from './Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
-        <div className='navbar'>
-            <h1>User-Auth</h1>
-
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact Us</li>
-            </ul>
-        </div>
-      </div>
+      
+      <Navbar/>
 
       <Routes>
         <Route path="/">
