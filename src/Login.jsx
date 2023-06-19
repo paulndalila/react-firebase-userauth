@@ -1,6 +1,6 @@
 import './loginRegister.css';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from './firebase';
 
@@ -9,7 +9,7 @@ export default function Login(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    
+    const navigate = useNavigate();
 
     const signin = (e) => {
         e.preventDefault();
@@ -18,6 +18,7 @@ export default function Login(){
                 alert(userCredential.user.email+ " successfully logged in!");    
                 setPassword('');
                 setEmail('');
+                navigate('/home');
             }).catch((error) => {
                 alert(error);
                 setPassword('');
