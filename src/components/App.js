@@ -14,10 +14,10 @@ function App() {
       <Navbar/>
 
       <Routes>
-        <Route path="/">
-          <Route path="/home" element = { <Home/> } />
-          <Route path='/register' element = { <Register/> } />
-          <Route index element = { <Login/> } />
+        <Route path="/home" element = { <Home/> } />
+        <Route path='/register' element = { <Register/> } />
+        <Route index element = { <Login/> } />
+        <Route path="/login" element = { <Login/> } >
         </Route>
       </Routes>
     
