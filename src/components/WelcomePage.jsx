@@ -1,9 +1,15 @@
 import React from 'react';
-import Login from './Login';
+import Navbar from './Navbar';
+import { Outlet } from 'react-router-dom';
 export default function Welcome() {
     return (
-        <>
-            <Login/>
-        </>
+        <div className="welcome">
+            <div>
+                <Navbar/>
+            </div>
+
+            <Outlet/>
+
+        </div>
     );
 }
