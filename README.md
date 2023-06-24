@@ -1,7 +1,5 @@
-<h1>This website was made with React JS & Firebase Auth APIs</h1>
+<h1>This website was made with React JS & Firebase Auth API</h1>
 <h3>Click here to view the website live: <a href="https://paulndalila.github.io/react-firebase-userauth/">Click me<a/></h3>
-
-  <br/>
 
 
   
