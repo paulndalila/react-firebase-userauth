@@ -1,25 +1,19 @@
 import './App.css';
-import Login from './Login';
-import Home from './Home';
-import Register from './Register';
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
-import Welcome from './WelcomePage';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function App() {
 
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path='/' element={ <Welcome/> }>
-        <Route path="home" element = { <Home/> } />
-        <Route path='register' element = { <Register/> } />
-        <Route path="login" element = { <Login/> } />
-      </Route>
-    )
-  );
-
   return (
+    <div>
+      <Navbar/>
 
-    <RouterProvider router={ router }/>
+      <div className='main' >
+        <Outlet/>
+      </div>
+    </div>
+    
     
   );
 }
