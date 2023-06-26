@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from './firebase';
-import Navbar from './Navbar';
 
 export default function Register(){
     const [email, setEmail] = useState('');
@@ -24,24 +23,20 @@ export default function Register(){
 
     }
     return (
-        <>
-            <Navbar/>
 
-            <div className='container'>
-                <form onSubmit={ register } className='form'>
-                    <h3>Register</h3>
+        <div className='container'>
+            <form onSubmit={ register } className='form'>
+                <h3>Register</h3>
 
-                    <input type="email" placeholder='Email address' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <input type="email" placeholder='Email address' value={email} onChange={(e)=>setEmail(e.target.value)} required/>
 
-                    <input type="password" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                <input type="password" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)} required/>
 
-                    <input type="password" placeholder='Confirm password'/>
-                    <button id='register' type='submit' >Register</button>
-                    
-                    <div>Already have an account? <Link to="/"> Login </Link></div>
-                </form>
-            </div>
-        </>
-
+                <input type="password" placeholder='Confirm password' required/>
+                <button id='register' type='submit' >Register</button>
+                
+                <div>Already have an account? <Link to="/"> Login </Link></div>
+            </form>
+        </div>
     );
 }

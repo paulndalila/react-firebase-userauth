@@ -33,9 +33,9 @@ export default function Login(){
             <form onSubmit={ signin } className='form'>
                 <h3>Login</h3>
 
-                <input type="email" placeholder='Email address' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <input type="email" placeholder='Email address' value={email} onChange={(e)=>setEmail(e.target.value)} required/>
 
-                <input type="password" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                <input type="password" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)} required/>
 
                 <button id='signin' type='submit' >Sign In</button>
 

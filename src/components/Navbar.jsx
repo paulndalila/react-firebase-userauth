@@ -9,13 +9,13 @@ export default function Navbar() {
         navigate('home');
     }
 
-    // const homeClick = ()=>{
-    //     navigate('home');
-    // }
+    const aboutClick = ()=>{
+        navigate('about');
+    }
 
-    // const homeClick = ()=>{
-    //     navigate('home');
-    // }
+    const contactClick = ()=>{
+        navigate('conatc');
+    }
 
     return ( 
         <div className="App">
@@ -24,8 +24,8 @@ export default function Navbar() {
   
               <ul>
                 <li onClick={ homeClick } >Home</li>
-                <li>About</li>
-                <li>Contact Us</li>
+                <li onClick={ aboutClick } >About</li>
+                <li onClick={ contactClick } >Contact Us</li>
               </ul>
           </div>
         </div>

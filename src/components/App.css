@@ -37,3 +37,8 @@ body{
 .navbar ul li:hover{
   background-color: #fff;
 }
+
+/* error panel */
+.error-container{
+  padding: 20px;
+}
