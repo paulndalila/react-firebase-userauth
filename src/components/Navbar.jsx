@@ -1,21 +1,21 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const homeClick = ()=>{
-        navigate('home');
-    }
+    // const homeClick = ()=>{
+    //     navigate('home');
+    // }
 
-    const aboutClick = ()=>{
-        navigate('about');
-    }
+    // const aboutClick = ()=>{
+    //     navigate('about');
+    // }
 
-    const contactClick = ()=>{
-        navigate('conatc');
-    }
+    // const contactClick = ()=>{
+    //     navigate('conatc');
+    // }
 
     return ( 
         <div className="App">
@@ -23,9 +23,9 @@ export default function Navbar() {
               <h1>User-Auth</h1>
   
               <ul>
-                <li onClick={ homeClick } >Home</li>
-                <li onClick={ aboutClick } >About</li>
-                <li onClick={ contactClick } >Contact Us</li>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact Us</li>
               </ul>
           </div>
         </div>
