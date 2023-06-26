@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+<h1>This website was made with React JS & Firebase Auth API</h1>
+<h3>Click here to view and test the website: <a href="https://paulndalila.github.io/react-firebase-userauth/">Click me<a/></h3>
+
+<br/>
+  
+<h1>Getting Started with Create React App</h1>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
